@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300;1,500&family=Open+Sans:ital,wght@0,500;0,600;1,500&display=swap");
+
+body {
+  box-sizing: border-box;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  background-color:#012a4a; /* Preto */
+  font-family: "Open Sans", sans-serif;
+  color: #313131;
+}
+
+.container {
+  max-width: 640px;
+  margin: 50px auto;
+  background-color: #e5e5e5; /* Azul escuro forte */
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1.3rem;
+
+}
+
+form input,
+form label,
+form button {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+form input {
+  font-size: 24px;
+  height: 50px;
+}
+
+form input:focus {
+  outline: 1px solid #00FF00; /* Tom de verde vivo */
+}
+
+form button {
+  border: none;
+  background-color: #00FF00; /* Tom de verde vivo */
+  color: bisque;
+  height: 40px;
+  cursor: pointer;
+}
+
+#label-title {
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  padding-top: 0;
+  margin-top: 0px;
+  padding-bottom: 15px;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 5px 0px;
+  margin: 0;
+}
+
+button {
+  padding: 3px 10px;
+  border-radius: 5px;
+  color: white;
+  background-color: #000000; /* Preto */
+  box-shadow: 0 0 10px #ccc;
+}
+
+#enviar {
+  background-color: #000000; /* Preto */
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+
+.column-container{
+  display: flex;
+}
