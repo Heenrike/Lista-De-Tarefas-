@@ -48,7 +48,7 @@ function salvarLista() {
   const lista = [];
   for (let tarefa of listaDeTarefas) {
     let tarefasText = tarefa.innerText;
-    tarefasText = tarefasText.replace("Apagar", " ");
+    tarefasText = tarefasText.replace("Apagar", "");
     lista.push(tarefasText);
   }
   let listaJson = JSON.stringify(lista);
