@@ -2,18 +2,12 @@ const form = document.querySelector(".form");
 const input = document.querySelector("#input");
 const tarefas = document.querySelector(".tarefas");
 const container = document.querySelector(".container");
-let li; // Declaração da variável 'li'
+let li1;
 
-function containerAll() {
-  const height = container.offsetHeight;
-  console.log(height);
-  if (height === 602) {
-    container.style.margin = "100px 0px";
-  }
-}
 
-function contarli() {
-  li = document.querySelectorAll("li");
+function contarLi() {
+  li1 = document.querySelectorAll("li");
+  console.log(li1.length);
 }
 
 form.addEventListener("submit", function (event) {
@@ -38,7 +32,7 @@ document.addEventListener("click", function (e) {
   const el = e.target;
   if (el.classList.contains("btnApagar")) {
     el.parentElement.remove();
-    contarli();
+    contarLi();
   }
   salvarLista();
 });
@@ -48,7 +42,7 @@ function salvarLista() {
   const lista = [];
   for (let tarefa of listaDeTarefas) {
     let tarefasText = tarefa.innerText;
-    tarefasText = tarefasText.replace("Apagar", "");
+    tarefasText = tarefasText.replace("Apagar", "").trim();
     lista.push(tarefasText);
   }
   let listaJson = JSON.stringify(lista);
@@ -68,11 +62,17 @@ function addTarefasSalvas() {
 addTarefasSalvas();
 
 function criarTarefa(inputText) {
-  const novaLi = document.createElement("li");
-  novaLi.innerHTML = inputText.trim();
-  tarefas.appendChild(novaLi);
-  contarli(); // Atualizar a variável 'li' após criar a nova <li>
-  criarBtnApagar(novaLi);
+  const li = document.createElement("li");
+  li.innerHTML = inputText;
+  tarefas.appendChild(li);
+  criarBtnApagar(li);
   salvarLista();
-  containerAll();
+  contarLi();
+  media();
+}
+
+function media() {
+  if (li1.length === 7) {
+    
+  }
 }

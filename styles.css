@@ -3,21 +3,24 @@
 body {
   box-sizing: border-box;
   outline: 0;
-  margin: 0;
+  margin: 0px;
   padding: 0;
-  background-color:#012a4a; /* Preto */
+  background-color: #012a4a; /* Preto */
   font-family: "Open Sans", sans-serif;
   color: #313131;
+  max-height: 100vh;
+  height: 100vh ;
+  justify-content: center;
 }
 
 .container {
-  max-width: 640px;
-  margin: 50px auto;
+  width: 500px;
+  margin: auto;
   background-color: #e5e5e5; /* Azul escuro forte */
-  padding: 20px;
+  padding: 13px;
   border-radius: 10px;
-  font-size: 1.3rem;
-
+  margin-bottom: -110px;
+  max-height: 100vh;
 }
 
 form input,
@@ -34,12 +37,12 @@ form input {
 }
 
 form input:focus {
-  outline: 1px solid #00FF00; /* Tom de verde vivo */
+  outline: 1px solid #00ff00; /* Tom de verde vivo */
 }
 
 form button {
   border: none;
-  background-color: #00FF00; /* Tom de verde vivo */
+  background-color: #00ff00; /* Tom de verde vivo */
   color: bisque;
   height: 40px;
   cursor: pointer;
@@ -81,9 +84,6 @@ button {
   text-align: center;
 }
 
-
-
-
-.column-container{
+.column-container {
   display: flex;
 }
